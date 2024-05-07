@@ -1,0 +1,1 @@
+import{C as t}from"./Cnm74spN.js";import{_ as e,c as n,b as c,a,n as s,o as r}from"./bwmaM1wM.js";const _={components:{ContactForm:t}},m=a("h1",null,"contact us",-1);function p(l,d,f,i,u,C){const o=s("ContactForm");return r(),n("div",null,[m,c(o)])}const x=e(_,[["render",p]]);export{x as default};
