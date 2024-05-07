@@ -12,14 +12,5 @@ export default defineNuxtConfig({
       }
     },
     plugins: ["~/plugins/preline.client.ts"],
-    modules: [['nuxt-mail',{
-      message: {
-        to: process.env.SMTP_USER,
-      },
-      smtp:{
-        host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
-      }
-    }]]
   })
   
