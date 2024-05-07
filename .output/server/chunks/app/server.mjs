@@ -631,7 +631,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./_nuxt/index-EvRecwmG.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-2PUrV1pR.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -963,7 +963,7 @@ const plugins = [
   plugin_nuxt3_gGdllsjxuZ
 ];
 const layouts = {
-  default: () => import('./_nuxt/default-CXGc8rlh.mjs').then((m) => m.default || m)
+  default: () => import('./_nuxt/default-B3BzAbuz.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
