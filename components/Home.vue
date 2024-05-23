@@ -1,54 +1,45 @@
 <template>
-  <section>
-    <div class="relative bg-gray-400 min-h-screen text-white overflow-hidden">
-      <div class="absolute inset-0 overflow-hidden">
-        <img src="../assets/img/hero2.jpg" alt="Background Image" class="object-cover object-center w-full h-full zoom-animation" />
-        <div></div>
-      </div>
+  
+  <section class="relative max-h-screen bg-gray-100 dark:bg-gray-100 overflow-hidden">
+  <!-- Square Pattern Background -->
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/square-grid.png')] bg-repeat opacity-10 z-0"></div>
 
-      <div class="relative py-52 flex flex-col justify-center items-center text-center px-5">
-        <h5 class="text-3xl font-extralight">Welcome</h5>
-        <h1 class="mt-3 text-6xl font-extralight leading-tight mb-4">I'm <span class="text-teal-400">Ndiene</span> Tshivhase </h1>
-        <div class=" bg-teal-400 rounded-full">
-          <p class="text-lg inline-block px-4 py-2 font-semibold">Diploma in IT | Software Development & Web Developer | Data Scientist</p>
+  <!-- Hero -->
+  <div class="relative z-10 overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:w-full before:h-full before:-z-10 before:transform before:-translate-x-1/2">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
+      <div class="border shadow-lg py-20 rounded-lg bg-white bg-opacity-80 relative">
+        <!-- Title -->
+        <div class="mt-5 max-w-3xl text-center mx-auto">
+          <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-700">
+            Hi<br>
+            <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">I'm Ndiene Tshivhase</span>
+            <br>
+            <span class="font-normal text-3xl">A Full Stack Software Developer</span>
+          </h1>
         </div>
-        <div class="mt-5">
-          <a href="#getintouch-section" class="border border-teal-400 hover:bg-teal-600 font-semibold text-lg text-white inline-block px-10 py-3 rounded-full">Hire Me!</a>
+        <!-- End Title -->
+
+        <div class="mt-5 max-w-3xl text-center mx-auto">
+          <p class="text-lg text-gray-600 dark:text-neutral-400">I specialize in creating dynamic and responsive web applications, leveraging the power of modern technologies to build efficient and scalable solutions.</p>
         </div>
-        <div class="flex space-x-4">
-          <a href="#" class="text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out">
-            <i class="fab fa-facebook-f"></i>
+
+        <!-- Buttons -->
+        <div class="mt-8 gap-3 flex justify-center">
+          <a class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800" href="#">
+            View My Work
+            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
           </a>
-          <a href="#" class="text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out">
-            <i class="fab fa-instagram"></i>
+          <a class="inline-flex justify-center items-center gap-x-3 text-center bg-white text-gray-800 dark:text-white dark:bg-neutral-800 hover:bg-gray-50 dark:hover:bg-neutral-700 border border-gray-300 dark:border-neutral-600 text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800" href="#">
+            Contact Me
+            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
           </a>
         </div>
+        <!-- End Buttons -->
       </div>
     </div>
-  </section>
+  </div>
+  <!-- End Hero -->
+</section>
+
+
 </template>
-
-<script>
-export default {
-  // Your component logic goes here
-}
-</script>
-
-<style scoped>
-/* Your component-specific styles go here */
-.zoom-animation {
-  animation: zoom-in 10s ease-in-out infinite alternate;
-}
-
-@keyframes zoom-in {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-</style>

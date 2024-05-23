@@ -1,49 +1,80 @@
 <template>
-     <section class="lg:p-20 p-5" id="portfolio">
-            <div class="lg:container mx-auto">
-                <h2 class="text-center text-4xl font-bold pb-10">Portfolio</h2>
-                <div class="lg:columns-4 sm:columns-2">
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">Food Delivery</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/food-delivery.jpg" />
-                    </div>
+  <section class="bg-white dark:bg-gray-100 py-16">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Title -->
+      <div class="text-center">
+        <div class="relative">
+          <h2 class="text-6xl font-bold text-gray-200 absolute inset-x-0 top-0 z-0 text-center">projects</h2>
+          <!-- Foreground Heading -->
+          <h2 class="text-4xl font-bold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-400 text-transparent relative text-center mb-8 z-10">
+            Projects
+          </h2>
+        </div>
+        <p class="mt-2 text-lg text-gray-600 dark:text-neutral-400">
+          A showcase of my latest work and collaborations
+        </p>
+      </div>
+      <!-- End Section Title -->
 
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">CMS</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/cms.jpg" />
-                    </div>
-
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">LMS</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/lms.jpg" />
-                    </div>
-
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">SDR</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/sdr.jpg" />
-                    </div>
-
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">VetQ</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/vetq.jpg" />
-                    </div>
-
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">Ismile</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/ismile.jpg" />
-                    </div>
-
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">Ehaul</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/ecommerce.jpg" />
-                    </div>
-
-                    <div class="p-5 bg-gray-50 sm:me-5 sm:mb-10 mb-5 rounded-md hover:shadow-md">
-                        <h3 class="text-xl mb-5">Feedback</h3>
-                        <img class="rounded-md h-48 max-h-48 w-full" src="https://rabiulislam.dev/documents/images/portfolio/feedback.jpg" />
-                    </div>
-                </div>
+      <div class="border shadow-lg p-5 rounded-lg">
+        <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Project Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="w-full h-48">
+              <img class="w-full h-full object-cover" src="../assets/projects/1.png" alt="Project 1">
             </div>
-        </section>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Nike Commercial Site</h3>
+              <p class="mt-2 text-gray-600 dark:text-neutral-400">
+                Developed an e-commerce site for Nike with a user-friendly interface, secure payment integration, and responsive design using React, Node.js, and MongoDB.
+              </p>
+              <a href="#" class="mt-4 inline-flex items-center text-blue-400 dark:text-blue-600 hover:underline">
+                Learn more
+                <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- End Project Card -->
 
+          <!-- Project Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="w-full h-48">
+              <img class="w-full h-full object-cover" src="../assets/projects/musicplayer.jpg" alt="Project 2">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Music Player</h3>
+              <p class="mt-2 text-gray-600 dark:text-neutral-400">
+                Created a music player app with features like playlist creation, shuffle, repeat, and dark mode. Built with Flutter and integrated with Firebase for real-time database management.
+              </p>
+              <a href="#" class="mt-4 inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+                Learn more
+                <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- End Project Card -->
+
+          <!-- Project Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="w-full h-48">
+              <img class="w-full h-full object-cover" src="../assets/projects/todo.jpg" alt="Project 3">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Todo App</h3>
+              <p class="mt-2 text-gray-600 dark:text-neutral-400">
+                Developed a Todo app with task categorization, due dates, and notifications. Built with Vue.js and Node.js, featuring a clean, intuitive UI.
+              </p>
+              <a href="#" class="mt-4 inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+                Learn more
+                <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- End Project Card -->
+
+          <!-- Add more project cards as needed -->
+        </div>
+      </div>
+    </div>
+  </section>
 </template>

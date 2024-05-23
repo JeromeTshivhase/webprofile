@@ -1,96 +1,90 @@
 <template>
-  <section class="bg-gray-100 bottom-0 left-0 right-0 bg-gradient-to-t from-gray-100 via-gray-200 to-transparent text-gray-600 py-20 px-10" id="skills-section">
-    <div class="container py-5">
-      <h1 class="text-center font-normal text-3xl mb-5">My Skills</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 py-3">
-        <div class="px-4 text-[20px]">
-          <h4 class="my-5 font-semibold">Coding skills</h4>
-          <div class="progress-wrapper">
-            <span class="caption">JavaScript</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 66%;">66%</div>
+  <section class="relative py-16 bg-white dark:bg-gray-100 overflow-hidden">
+    <!-- Gradients -->
+  <div aria-hidden="true" class="flex absolute -top-96 start-1/2 transform -translate-x-1/2">
+    <div class="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem] dark:from-violet-900/50 dark:to-purple-900"></div>
+    <div class="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] dark:from-indigo-900/70 dark:via-indigo-900/70 dark:to-blue-900/70"></div>
+  </div>
+  <!-- End Gradients -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <!-- Skills Section -->
+      <div class="relative">
+        <!-- Background Heading -->
+        <h2 class="text-6xl font-bold text-gray-200 absolute inset-x-0 top-0 z-0 text-center">Skills</h2>
+        <!-- Foreground Heading -->
+        <h2 class="text-4xl font-bold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-400 text-transparent relative text-center mb-8 z-10">
+          Skills
+        </h2>
+
+        <div class="border shadow-lg py-16 rounded-lg bg-white bg-opacity-80 relative z-10">
+          <div class="pt-16 flex flex-wrap justify-center gap-6 relative z-10">
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/javascript.svg" alt="JavaScript Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900">JavaScript</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Advanced</p>
             </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Java</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 70%;">70%</div>
+            <!-- End Skill Item -->
+
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/icons8-vue-js.svg" alt="VueJs Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900">VueJs</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Advanced</p>
             </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">HTML + CSS</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 85%;">85%</div>
+            <!-- End Skill Item -->
+
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/nodejs.svg" alt="Node.js Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900 ">Node.js</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Intermediate</p>
             </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Python</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 70%;">70%</div>
+            <!-- End Skill Item -->
+
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/tailwind-css.svg" alt="Tailwind-CSS Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900 ">Tailwind-CSS</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Advanced</p>
             </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Vue.js</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 90%;">90%</div>
+            <!-- End Skill Item -->
+
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/html.svg" alt="HTML Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900">HTML</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Advanced</p>
             </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Tailwind CSS</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 90%;">90%</div>
+            <!-- End Skill Item -->
+
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/python.svg" alt="Python Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900 ">Python</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Intermediate</p>
             </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Version Control [GitHub]</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 90%;">90%</div>
+            <!-- End Skill Item -->
+
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/mariadb.svg" alt="MongoDB Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900 ">MongoDB</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Intermediate</p>
             </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Spring Boot</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 70%;">70%</div>
+            <!-- End Skill Item -->
+
+            <!-- Skill Item -->
+            <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4">
+              <img src="../assets/icons/sql-server.svg" alt="SQL Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900 ">SQL</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Intermediate</p>
             </div>
-          </div>
-        </div>
-        <div class="px-4 text-[20px]">
-          <h4 class="my-5 font-semibold">Data Science Skills</h4>
-          <div class="progress-wrapper">
-            <span class="caption">Machine Learning</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 62%;">62%</div>
-            </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Data Visualization</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 69%;">69%</div>
-            </div>
-          </div>
-          <div class="progress-wrapper">
-            <span class="caption">Tableau & Power BI</span>
-            <div class="progress bg-white rounded-full">
-              <div class="progress-bar bg-teal-400" style="width: 79%;">79%</div>
-            </div>
+            <!-- End Skill Item -->
           </div>
         </div>
       </div>
+      <!-- End Skills Section -->
     </div>
   </section>
 </template>
-
-<style>
-  .progress-wrapper {
-    margin-bottom: 1rem;
-  }
-
-  .progress {
-    height: 1rem;
-  }
-
-  .progress-bar {
-    font-size: 0.75rem;
-    border-radius: 9px;
-  }
-</style>

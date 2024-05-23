@@ -23,7 +23,7 @@
     "@nuxt/kit": "^3.10.3",
     "@nuxtjs/axios": "^5.13.6",
     "dotenv": "^16.4.5",
-    "preline": "^2.0.3",
+    "preline": "^2.1.0",
     "swiper": "^11.0.5"
   }
 }

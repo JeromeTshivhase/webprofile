@@ -1,20 +1,47 @@
 <template>
-    <section class="bg-gray-100">
-      <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
-          <div class="mt-12 md:mt-0">
-              <img src="../assets/img/Me.png" alt="Me" class="object-cover mx-auto sm:w-80 md:w-auto h-auto transform scale-110 bg-slate-200 ">
-          </div>
-          <div class="max-w-lg">
-            <h2 class="text-4xl font-light text-gray-600 sm:text-4xl py-3">Ndiene Tshivhase</h2>
-            <h5 class="font-semibold text-teal-500">Diploma in IT | Software Development & Business Analysis | Data Science Internship</h5>
-            <p class="mt-4 text-gray-600 text-lg">A passionate data scientist and aspiring web developer. With a background in software development and a diploma in Information Technology Software Development from Vaal University of Technology, I've combined my skills to create data-driven insights and engaging web experiences. My data science internship experience has honed my ability to derive meaningful insights from complex datasets. Simultaneously, my interest in web development fuels my drive to craft user-friendly and visually appealing online platforms. Let's connect the dots between data science and web development, creating immersive experiences that empower users and drive innovation. Join me on this exciting journey!.</p>
-            <div class="py-3">
-              <button href="#" class="bg-teal-500 hover:bg-teal-600 font-semibold text-lg text-white inline-block px-10 py-3 rounded-full">Download CV</button>
+  <section class="py-6 bg-gray-100 dark:bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- About Section -->
+        <div>
+            <div class="relative">
+                <h2 class="text-6xl font-bold  text-gray-300  absolute inset-x-0 top-0 z-0 text-center">About Me</h2>
+                <!-- Foreground Heading -->
+                <h2 class="text-4xl font-bold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-400 text-transparent relative text-center mb-10 z-10">
+                    About Me</h2>
             </div>
-          </div>
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <!-- About Image -->
+                <div class="md:w-1/3">
+                    <img class="rounded-lg " src="../assets/img/Me.png" alt="Ndiene Tshivhase">
+                </div>
+                <!-- About Content -->
+                <div class="md:w-2/3">
+                    <p class="text-lg text-gray-700 dark:text-gray-800 mb-4">
+                        Hi, I'm Ndiene Tshivhase, a passionate Full Stack Software Developer with a knack for creating
+                        dynamic and responsive web applications. With several years of experience in the industry, I
+                        have honed my skills in both frontend and backend development, specializing in modern
+                        technologies and frameworks.
+                    </p>
+                    <p class="text-lg text-gray-700 dark:text-gray-800 mb-4">
+                        I am driven by the desire to build efficient, scalable, and user-friendly solutions. I enjoy
+                        working collaboratively with cross-functional teams to bring ideas to life and continuously
+                        learn and adapt to the evolving tech landscape.
+                    </p>
+                    <p class="text-lg text-gray-700 dark:text-gray-800">
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source
+                        projects, or enjoying outdoor activities. Let's connect and build something great together!
+                    </p>
+                    <!-- Download Resume Button -->
+                    <div class="mt-6">
+                        <a href="/path/to/your/resume.pdf" download class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-  </template>
+        <!-- End About Section -->
+    </div>
+</section>
+</template>
   
