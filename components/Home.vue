@@ -1,6 +1,6 @@
 <template>
   
-  <section class="relative max-h-screen bg-gray-100 dark:bg-gray-100 overflow-hidden">
+  <section class="relative max-h-screen bg-gray-100 dark:bg-gray-100 overflow-hidden" id="home-section">
   <!-- Square Pattern Background -->
   <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/square-grid.png')] bg-repeat opacity-10 z-0"></div>
 

@@ -3,7 +3,7 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Experience Section -->
-      <div id="experience" class="mb-16 relative">
+      <div id="experience-section" class="mb-16 relative">
         
         <div class="py-2">
           <h2 class="text-6xl font-bold text-gray-200 absolute inset-x-0 top-0 z-0 text-center">Experience</h2>

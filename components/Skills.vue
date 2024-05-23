@@ -1,5 +1,5 @@
 <template>
-  <section class="relative py-16 bg-white dark:bg-gray-100 overflow-hidden">
+  <section class="relative py-16 bg-white dark:bg-gray-100 overflow-hidden" id="skills-section">
     <!-- Gradients -->
   <div aria-hidden="true" class="flex absolute -top-96 start-1/2 transform -translate-x-1/2">
     <div class="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem] dark:from-violet-900/50 dark:to-purple-900"></div>

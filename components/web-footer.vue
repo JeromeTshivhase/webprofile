@@ -4,8 +4,8 @@
     <div class="flex flex-col md:flex-row items-center justify-between">
       <!-- Footer Logo -->
       <div class="mb-4 md:mb-0">
-        <a href="#" class="flex items-center">
-          <img class="h-8 w-8" src="../assets/logo.png" alt="Logo">
+        <a href="/" class="flex items-center">
+          <img class="h-12 w-12" src="../assets/logo.png" alt="Logo">
           <h1 class="text-2xl font-bold">Ndiene<span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Tshivhase</span></h1>
         </a>
       </div>
@@ -13,11 +13,12 @@
 
       <!-- Footer Navigation Links -->
       <div class="flex space-x-4">
-        <a href="#about" class="text-gray-400 hover:text-gray-300">About</a>
-        <a href="#experience" class="text-gray-400 hover:text-gray-300">Experience</a>
-        <a href="#education" class="text-gray-400 hover:text-gray-300">Education</a>
-        <a href="#skills" class="text-gray-400 hover:text-gray-300">Skills</a>
-        <a href="#contact" class="text-gray-400 hover:text-gray-300">Contact</a>
+        <a href="#about-section" class="text-gray-400 hover:text-gray-300">About</a>
+        <a href="#skills-section" class="text-gray-400 hover:text-gray-300">Skills</a>
+        <a href="#experience-section" class="text-gray-400 hover:text-gray-300">Experience</a>
+        <a href="#education-section" class="text-gray-400 hover:text-gray-300">Education</a>
+        <a href="#projects-section" class="text-gray-400 hover:text-gray-300">Projects</a>
+        <a href="#contact-section" class="text-gray-400 hover:text-gray-300">Contact</a>
       </div>
       <!-- End Footer Navigation Links -->
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <section class="py-6 bg-gray-100 dark:bg-neutral-100">
+  <section class="py-6 bg-gray-100 dark:bg-neutral-100" id="about-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- About Section -->
         <div>
