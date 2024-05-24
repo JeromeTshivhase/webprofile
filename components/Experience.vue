@@ -14,7 +14,7 @@
         </div>
         <div class="space-y-12">
           <!-- Experience Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Software Developer Intern</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">OL Afrika Media Foundation</p>
@@ -32,7 +32,7 @@
           <!-- End Experience Item -->
 
           <!-- Experience Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Data Science Internship</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Socian Ltd - Remote</p>
@@ -59,7 +59,7 @@
           <!-- End Experience Item -->
 
           <!-- Experience Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Data Science Internship</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Deviare - Remote</p>
@@ -67,7 +67,7 @@
             </div>
             <div class="md:w-2/3">
               <p class="text-gray-700 dark:text-gray-700">
-                Completed capstone project on Comcast consumer complaints. Analyzed data using tools such as pandas, NumPy, matplotlib, and seaborn. Created trend charts to visualize patterns and insights from the data. Developed an interactive Tableau dashboard to present the findings. Demonstrated proficiency in data analysis, data visualization, and dashboard creation.""
+                Completed capstone project on Comcast consumer complaints. Analyzed data using tools such as pandas, NumPy, matplotlib, and seaborn. Created trend charts to visualize patterns and insights from the data. Developed an interactive Tableau dashboard to present the findings. Demonstrated proficiency in data analysis, data visualization, and dashboard creation.
               </p>
             </div>
           </div>
@@ -87,9 +87,9 @@
         </div>
         <div class="space-y-12">
           <!-- Education Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
-              <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent ">Diploma in Information Technology</h3>
+              <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Diploma in Information Technology</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Vaal University of Technology</p>
               <p class="text-sm text-gray-600 dark:text-gray-800">2018 - 2022</p>
             </div>
@@ -102,7 +102,7 @@
           <!-- End Education Item -->
 
           <!-- Education Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">National Senior Certificate</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Lucas Ratshalingwa Secondary School</p>
@@ -130,13 +130,13 @@
         </div>
         <div class="space-y-12">
           <!-- Certificate Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Data Science with Python</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Issued: July 2022</p>
             </div>
             <div class="md:w-2/3">
-              <p class="text-gray-700 dark:text-gray-700mb-2">
+              <p class="text-gray-700 dark:text-gray-700 mb-2">
                 Gained expertise in Python for data science, including libraries such as pandas, NumPy, matplotlib, and seaborn. Learned to analyze and visualize data effectively.
               </p>
               <a href="https://www.credential-link.com" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
@@ -145,7 +145,7 @@
           <!-- End Certificate Item -->
 
           <!-- Certificate Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Machine Learning</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Issued: July 2022</p>
@@ -160,7 +160,7 @@
           <!-- End Certificate Item -->
 
           <!-- Certificate Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Deep Learning with Keras and TensorFlow</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Issued: August 2022</p>
@@ -175,7 +175,7 @@
           <!-- End Certificate Item -->
 
           <!-- Certificate Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Tableau Certification Training</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Issued: August 2022</p>
@@ -190,7 +190,7 @@
           <!-- End Certificate Item -->
 
           <!-- Certificate Item -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Getting Started with Data Science</h3>
               <p class="text-sm text-gray-600 dark:text-gray-800">Issued: October 2021</p>

@@ -12,7 +12,7 @@
       <!-- End Footer Logo -->
 
       <!-- Footer Navigation Links -->
-      <div class="flex space-x-4">
+      <div class="flex flex-col sm:flex-row sm:space-x-4 px-8 space-y-4 sm:space-y-0">
         <a href="#about-section" class="text-gray-400 hover:text-gray-300">About</a>
         <a href="#skills-section" class="text-gray-400 hover:text-gray-300">Skills</a>
         <a href="#experience-section" class="text-gray-400 hover:text-gray-300">Experience</a>
@@ -20,6 +20,8 @@
         <a href="#projects-section" class="text-gray-400 hover:text-gray-300">Projects</a>
         <a href="#contact-section" class="text-gray-400 hover:text-gray-300">Contact</a>
       </div>
+
+
       <!-- End Footer Navigation Links -->
     </div>
     <div class="mt-8 text-center text-gray-400">

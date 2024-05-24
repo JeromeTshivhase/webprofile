@@ -19,7 +19,7 @@
       <div class="border shadow-lg p-5 rounded-lg">
         <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <!-- Project Card -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-xl">
             <div class="w-full h-48">
               <img class="w-full h-full object-cover" src="../assets/projects/1.png" alt="Project 1">
             </div>
@@ -37,7 +37,7 @@
           <!-- End Project Card -->
 
           <!-- Project Card -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-xl">
             <div class="w-full h-48">
               <img class="w-full h-full object-cover" src="../assets/projects/musicplayer.jpg" alt="Project 2">
             </div>
@@ -55,7 +55,7 @@
           <!-- End Project Card -->
 
           <!-- Project Card -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-xl">
             <div class="w-full h-48">
               <img class="w-full h-full object-cover" src="../assets/projects/todo.jpg" alt="Project 3">
             </div>
