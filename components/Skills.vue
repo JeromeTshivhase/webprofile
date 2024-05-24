@@ -97,7 +97,12 @@
               <p class="text-gray-600 dark:text-neutral-400">Intermediate</p>
             </div>
             <!-- End Skill Item -->
-
+             <!-- Skill Item -->
+             <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
+              <img src="../assets/icons/spring-boot.svg" alt="Tableau Icon" class="h-12 mx-auto mb-2">
+              <h3 class="text-xl font-semibold text-gray-900">Spring Boot</h3>
+              <p class="text-gray-600 dark:text-neutral-400">Beginner</p>
+            </div>
             <!-- Skill Item -->
             <div class="bg-gray-100 dark:bg-gray-100 text-center rounded-lg p-4 shadow-md w-full sm:w-1/2 lg:w-1/4 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
               <img src="../assets/icons/tableau.svg" alt="Tableau Icon" class="h-12 mx-auto mb-2">
