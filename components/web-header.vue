@@ -31,11 +31,6 @@
               </a>
             </div>
           </div>
-          <div class="hidden sm:ml-6 sm:flex sm:items-center px-16">
-            <button href="../assets/resume/ndienetshivhase.pdf" download class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800">
-              Download Resume
-            </button>
-          </div>
           <div class="-mr-2 flex items-center sm:hidden">
             <!-- Mobile menu button -->
             <button @click.stop="toggleMenu" class="bg-gray-200 dark:bg-gray-700 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">

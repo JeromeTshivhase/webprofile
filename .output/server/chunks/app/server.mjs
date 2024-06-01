@@ -1,5 +1,5 @@
 import { version, unref, inject, defineComponent, h, computed, ref, provide, shallowReactive, watch, Suspense, nextTick, Transition, hasInjectionContext, mergeProps, useSSRContext, createApp, effectScope, reactive, getCurrentInstance, defineAsyncComponent, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw, withCtx } from 'vue';
-import { d as useRuntimeConfig$1, $ as $fetch$1, w as withQuery, l as hasProtocol, p as parseURL, m as isScriptProtocol, j as joinURL, h as createError$1, n as defu, o as sanitizeStatusCode, q as createHooks } from '../nitro/node-server.mjs';
+import { d as useRuntimeConfig$1, $ as $fetch, w as withQuery, l as hasProtocol, p as parseURL, m as isScriptProtocol, j as joinURL, h as createError$1, n as defu, o as sanitizeStatusCode, q as createHooks } from '../nitro/node-server.mjs';
 import { getActiveHead } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
 import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
@@ -10,8 +10,6 @@ import 'fs';
 import 'path';
 import 'node:fs';
 import 'node:url';
-import 'nodemailer';
-import '@dword-design/functions';
 
 function createContext$1(opts = {}) {
   let currentInstance;
@@ -113,7 +111,7 @@ const asyncHandlers$1 = _globalThis$1[asyncHandlersKey$1] || (_globalThis$1[asyn
 const appConfig = useRuntimeConfig$1().app;
 const baseURL = () => appConfig.baseURL;
 if (!globalThis.$fetch) {
-  globalThis.$fetch = $fetch$1.create({
+  globalThis.$fetch = $fetch.create({
     baseURL: baseURL()
   });
 }
@@ -631,7 +629,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./_nuxt/index-2PUrV1pR.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-C2V-dpZm.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -939,31 +937,14 @@ const revive_payload_server_eJ33V7gbc6 = /* @__PURE__ */ defineNuxtPlugin({
 const components_plugin_KR1HBZs4kY = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:global-components"
 });
-const plugin_nuxt3_gGdllsjxuZ = /* @__PURE__ */ defineNuxtPlugin(() => ({
-  provide: {
-    mail: {
-      send: async (config) => {
-        try {
-          await $fetch("/mail/send", {
-            body: config,
-            method: "POST"
-          });
-        } catch (error) {
-          throw new Error(error.response._data.statusMessage);
-        }
-      }
-    }
-  }
-}));
 const plugins = [
   unhead_KgADcZ0jPj,
   plugin,
   revive_payload_server_eJ33V7gbc6,
-  components_plugin_KR1HBZs4kY,
-  plugin_nuxt3_gGdllsjxuZ
+  components_plugin_KR1HBZs4kY
 ];
 const layouts = {
-  default: () => import('./_nuxt/default-B3BzAbuz.mjs').then((m) => m.default || m)
+  default: () => import('./_nuxt/default-Q5AWN4vo.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",

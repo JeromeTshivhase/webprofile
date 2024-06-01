@@ -10,8 +10,6 @@ import 'fs';
 import 'path';
 import 'node:fs';
 import 'node:url';
-import 'nodemailer';
-import '@dword-design/functions';
 import 'unhead';
 import 'vue-router';
 

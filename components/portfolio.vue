@@ -28,8 +28,8 @@
               <p class="mt-2 text-gray-600 dark:text-neutral-400">
                 Developed an e-commerce site for Nike with a user-friendly interface, secure payment integration, and responsive design using React, Node.js, and MongoDB.
               </p>
-              <a href="#" class="mt-4 inline-flex items-center text-blue-400 dark:text-blue-600 hover:underline">
-                Learn more
+              <a href="https://github.com/TshivhaseNdiene/commercial-site" class="mt-4 inline-flex items-center text-blue-400 dark:text-blue-600 hover:underline">
+                Visit my gitHub for more
                 <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
               </a>
             </div>
@@ -46,8 +46,8 @@
               <p class="mt-2 text-gray-600 dark:text-neutral-400">
                 Created a music player app with features like playlist creation, shuffle, repeat, and dark mode. Built with Flutter and integrated with Firebase for real-time database management.
               </p>
-              <a href="#" class="mt-4 inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
-                Learn more
+              <a href="#" class="mt-4 inline-flex items-center text-blue-400 dark:text-blue-600 hover:underline">
+              Visit my GitHub for more
                 <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
               </a>
             </div>
@@ -64,8 +64,8 @@
               <p class="mt-2 text-gray-600 dark:text-neutral-400">
                 Developed a Todo app with task categorization, due dates, and notifications. Built with Vue.js and Node.js, featuring a clean, intuitive UI.
               </p>
-              <a href="#" class="mt-4 inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
-                Learn more
+              <a href="https://github.com/TshivhaseNdiene/todo-app/tree/feat/new-feature" class="mt-4 inline-flex items-center text-blue-400 dark:text-blue-600 hover:underline">
+                Visit my GitHub for more
                 <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
               </a>
             </div>

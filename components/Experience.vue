@@ -130,6 +130,20 @@
         </div>
         <div class="space-y-12">
           <!-- Certificate Item -->
+          <div  class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
+            <div class="md:w-1/3">
+              <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">HTML, CSS, and Javascript for Web Developers</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Issued: December 20210</p>
+            </div>
+              <div class="md:w-2/3">
+                 <p class="text-gray-700 dark:text-gray-700 mb-2">
+                   Completed an in-depth course covering HTML, CSS, and JavaScript, enabling the development of modern and responsive web applications. Gained skills in creating dynamic web content and improving web page interactivity.
+                 </p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/N7Q8RY7QRPHB" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Show Credential</a>
+               </div>
+            </div>
+
+          <!-- Certificate Item -->
           <div class="flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm p-5 transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-200">
             <div class="md:w-1/3">
               <h3 class="text-2xl font-semibold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Data Science with Python</h3>
@@ -139,7 +153,7 @@
               <p class="text-gray-700 dark:text-gray-700 mb-2">
                 Gained expertise in Python for data science, including libraries such as pandas, NumPy, matplotlib, and seaborn. Learned to analyze and visualize data effectively.
               </p>
-              <a href="https://www.credential-link.com" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
+              <a href="https://certificates.simplicdn.net/share/thumb_3654681_1660291857.png" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
             </div>
           </div>
           <!-- End Certificate Item -->
@@ -169,7 +183,7 @@
               <p class="text-gray-700 dark:text-gray-700 mb-2">
                 Learned to build and train deep neural networks using Keras and TensorFlow. Covered concepts like convolutional networks, recurrent networks, and transfer learning.
               </p>
-              <a href="https://www.credential-link.com" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
+              <a href="https://certificates.simplicdn.net/share/thumb_3863962.png" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
             </div>
           </div>
           <!-- End Certificate Item -->
@@ -184,7 +198,7 @@
               <p class="text-gray-700 dark:text-gray-700 mb-2">
                 Gained proficiency in using Tableau for data visualization. Learned to create interactive dashboards and perform data analysis to uncover insights.
               </p>
-              <a href="https://www.credential-link.com" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
+              <a href="https://certificates.simplicdn.net/share/thumb_3928147.png" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
             </div>
           </div>
           <!-- End Certificate Item -->
@@ -199,7 +213,7 @@
               <p class="text-gray-700 dark:text-gray-700 mb-2">
                 Introduction to the basics of data science, including data manipulation, analysis, and visualization. Used Python and Jupyter notebooks to work on data projects.
               </p>
-              <a href="https://www.credential-link.com" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
+              <a href="https://www.credly.com/badges/9d9058b3-5158-4df7-9393-721fe7e8150e?source=linked_in_profile" target="_blank" class="text-blue-600 dark:text-blue-400">Show Credential</a>
             </div>
           </div>
           <!-- End Certificate Item -->

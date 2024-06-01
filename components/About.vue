@@ -27,13 +27,6 @@
               <p class="text-lg text-gray-700 dark:text-gray-800">
                 When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities. Let's connect and build something great together!
               </p>
-              <!-- Download Resume Button -->
-               <!-- Download Resume Button -->
-            <div class="mt-6">
-              <a href="assets/cv/ndiene.pdf" download="ndiene.pdf" class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800">
-                <i class="fa fa-download"></i> Download CV
-              </a>
-            </div>
             </div>
           </div>
         </div>

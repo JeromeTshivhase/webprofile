@@ -4,8 +4,6 @@ import { promises, existsSync } from 'fs';
 import { dirname as dirname$1, resolve as resolve$1, join } from 'path';
 import { promises as promises$1 } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import nodemailer from 'nodemailer';
-import { findIndex, omit } from '@dword-design/functions';
 
 const suspectProtoRx = /"(?:_|\\u0{2}5[Ff]){2}(?:p|\\u0{2}70)(?:r|\\u0{2}72)(?:o|\\u0{2}6[Ff])(?:t|\\u0{2}74)(?:o|\\u0{2}6[Ff])(?:_|\\u0{2}5[Ff]){2}"\s*:/;
 const suspectConstructorRx = /"(?:c|\\u0063)(?:o|\\u006[Ff])(?:n|\\u006[Ee])(?:s|\\u0073)(?:t|\\u0074)(?:r|\\u0072)(?:u|\\u0075)(?:c|\\u0063)(?:t|\\u0074)(?:o|\\u006[Ff])(?:r|\\u0072)"\s*:/;
@@ -1999,7 +1997,6 @@ function getRequestHeader(event, name) {
 }
 
 const RawBodySymbol = Symbol.for("h3RawBody");
-const ParsedBodySymbol = Symbol.for("h3ParsedBody");
 const PayloadMethods$1 = ["PATCH", "POST", "PUT", "DELETE"];
 function readRawBody(event, encoding = "utf8") {
   assertMethod(event, PayloadMethods$1);
@@ -2061,26 +2058,6 @@ function readRawBody(event, encoding = "utf8") {
   const result = encoding ? promise.then((buff) => buff.toString(encoding)) : promise;
   return result;
 }
-async function readBody(event, options = {}) {
-  const request = event.node.req;
-  if (hasProp(request, ParsedBodySymbol)) {
-    return request[ParsedBodySymbol];
-  }
-  const contentType = request.headers["content-type"] || "";
-  const body = await readRawBody(event);
-  let parsed;
-  if (contentType === "application/json") {
-    parsed = _parseJSON(body, options.strict ?? true);
-  } else if (contentType.startsWith("application/x-www-form-urlencoded")) {
-    parsed = _parseURLEncodedBody(body);
-  } else if (contentType.startsWith("text/")) {
-    parsed = body;
-  } else {
-    parsed = _parseJSON(body, options.strict ?? false);
-  }
-  request[ParsedBodySymbol] = parsed;
-  return parsed;
-}
 function getRequestWebStream(event) {
   if (!PayloadMethods$1.includes(event.method)) {
     return;
@@ -2114,35 +2091,6 @@ function getRequestWebStream(event) {
       });
     }
   });
-}
-function _parseJSON(body = "", strict) {
-  if (!body) {
-    return void 0;
-  }
-  try {
-    return destr(body, { strict });
-  } catch {
-    throw createError$1({
-      statusCode: 400,
-      statusMessage: "Bad Request",
-      message: "Invalid JSON body"
-    });
-  }
-}
-function _parseURLEncodedBody(body) {
-  const form = new URLSearchParams(body);
-  const parsedForm = /* @__PURE__ */ Object.create(null);
-  for (const [key, value] of form.entries()) {
-    if (hasProp(parsedForm, key)) {
-      if (!Array.isArray(parsedForm[key])) {
-        parsedForm[key] = [parsedForm[key]];
-      }
-      parsedForm[key].push(value);
-    } else {
-      parsedForm[key] = value;
-    }
-  }
-  return parsedForm;
 }
 
 function handleCacheHeaders(event, opts) {
@@ -2255,7 +2203,7 @@ function splitCookiesString(cookiesString) {
 }
 
 const defer = typeof setImmediate === "undefined" ? (fn) => fn() : setImmediate;
-function send$1(event, data, type) {
+function send(event, data, type) {
   if (type) {
     defaultContentType(event, type);
   }
@@ -2312,7 +2260,7 @@ function sendRedirect(event, location, code = 302) {
   event.node.res.setHeader("location", location);
   const encodedLoc = location.replace(/"/g, "%22");
   const html = `<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=${encodedLoc}"></head></html>`;
-  return send$1(event, html, MIMES.html);
+  return send(event, html, MIMES.html);
 }
 function getResponseHeader(event, name) {
   return event.node.res.getHeader(name);
@@ -2912,11 +2860,11 @@ function handleHandlerResponse(event, val, jsonSpace) {
       return sendStream(event, val);
     }
     if (val.buffer) {
-      return send$1(event, val);
+      return send(event, val);
     }
     if (val.arrayBuffer && typeof val.arrayBuffer === "function") {
       return val.arrayBuffer().then((arrayBuffer) => {
-        return send$1(event, Buffer.from(arrayBuffer), val.type);
+        return send(event, Buffer.from(arrayBuffer), val.type);
       });
     }
     if (val instanceof Error) {
@@ -2928,13 +2876,13 @@ function handleHandlerResponse(event, val, jsonSpace) {
   }
   const valType = typeof val;
   if (valType === "string") {
-    return send$1(event, val, MIMES.html);
+    return send(event, val, MIMES.html);
   }
   if (valType === "object" || valType === "boolean" || valType === "number") {
-    return send$1(event, JSON.stringify(val, void 0, jsonSpace), MIMES.json);
+    return send(event, JSON.stringify(val, void 0, jsonSpace), MIMES.json);
   }
   if (valType === "bigint") {
-    return send$1(event, val.toString(), MIMES.json);
+    return send(event, val.toString(), MIMES.json);
   }
   throw createError$1({
     statusCode: 500,
@@ -3819,7 +3767,7 @@ function klona(x) {
 
 const inlineAppConfig = {
   "nuxt": {
-    "buildId": "3f3c3694-fdf0-4cfa-bbce-d82af334503f"
+    "buildId": "9e0033c1-b60d-4fe5-9b68-d615bc21bd7d"
   }
 };
 
@@ -4622,7 +4570,7 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\Users\\tshiv\\Desktop\\webprofile\\.data\\kv"}));
+storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\Users\\tshiv\\projects\\webprofile\\.data\\kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -5069,7 +5017,7 @@ const errorHandler = (async function errorhandler(error, event) {
   setResponseStatus(event, errorObject.statusCode !== 200 && errorObject.statusCode || 500, errorObject.statusMessage);
   if (isJsonRequest(event)) {
     setResponseHeader(event, "Content-Type", "application/json");
-    return send$1(event, JSON.stringify(errorObject));
+    return send(event, JSON.stringify(errorObject));
   }
   const reqHeaders = getRequestHeaders(event);
   const isRenderingError = event.path.startsWith("/__nuxt_error") || !!reqHeaders["x-nuxt-error"];
@@ -5086,7 +5034,7 @@ const errorHandler = (async function errorhandler(error, event) {
       return;
     }
     setResponseHeader(event, "Content-Type", "text/html;charset=UTF-8");
-    return send$1(event, template(errorObject));
+    return send(event, template(errorObject));
   }
   const html = await res.text();
   if (event.handled) {
@@ -5096,114 +5044,128 @@ const errorHandler = (async function errorhandler(error, event) {
     setResponseHeader(event, header, value);
   }
   setResponseStatus(event, res.status && res.status !== 200 ? res.status : void 0, res.statusText);
-  return send$1(event, html);
+  return send(event, html);
 });
 
 const assets = {
-  "/_nuxt/default.DfWLWdfU.js": {
-    "type": "application/javascript",
-    "etag": "\"21cf-d3eOx8/uLQamCPB4kHCPwdpCfYI\"",
-    "mtime": "2024-05-07T17:14:32.158Z",
-    "size": 8655,
-    "path": "../public/_nuxt/default.DfWLWdfU.js"
+  "/_nuxt/1.pJOEPdt8.png": {
+    "type": "image/png",
+    "etag": "\"5c718-JqoFN5MwzLV8fhuwOAV6RUal8l0\"",
+    "mtime": "2024-06-01T19:42:47.339Z",
+    "size": 378648,
+    "path": "../public/_nuxt/1.pJOEPdt8.png"
   },
-  "/_nuxt/default.YIaU7-Vo.css": {
+  "/_nuxt/default.CsrQd9Ge.js": {
+    "type": "application/javascript",
+    "etag": "\"1a71-m4l6lYQXxYEU+TL8j9Tnj4gSphI\"",
+    "mtime": "2024-06-01T19:42:47.345Z",
+    "size": 6769,
+    "path": "../public/_nuxt/default.CsrQd9Ge.js"
+  },
+  "/_nuxt/default._KygY5OE.css": {
     "type": "text/css; charset=utf-8",
-    "etag": "\"6b-Y2wZFcUWFbaA7l26nljp6oZ3pSM\"",
-    "mtime": "2024-05-07T17:14:32.159Z",
-    "size": 107,
-    "path": "../public/_nuxt/default.YIaU7-Vo.css"
+    "etag": "\"98-bA0QyKYyYd+m5//S+iLiinm1WQg\"",
+    "mtime": "2024-06-01T19:42:47.339Z",
+    "size": 152,
+    "path": "../public/_nuxt/default._KygY5OE.css"
   },
-  "/_nuxt/entry.Cxq3CueM.js": {
+  "/_nuxt/entry.3-ziQEfk.js": {
     "type": "application/javascript",
-    "etag": "\"4a454-8OyndO/HYRd9mX8yMTW4y1y9tHk\"",
-    "mtime": "2024-05-07T17:14:32.158Z",
-    "size": 304212,
-    "path": "../public/_nuxt/entry.Cxq3CueM.js"
+    "etag": "\"51a66-8Z07cQXm+lPbPpOx07n+9menHpc\"",
+    "mtime": "2024-06-01T19:42:47.325Z",
+    "size": 334438,
+    "path": "../public/_nuxt/entry.3-ziQEfk.js"
   },
   "/_nuxt/error-404.CoUbADi5.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"e26-9UI2Z985OY4ttYcbyiWh91cxpnM\"",
-    "mtime": "2024-05-07T17:14:32.157Z",
+    "mtime": "2024-06-01T19:42:47.339Z",
     "size": 3622,
     "path": "../public/_nuxt/error-404.CoUbADi5.css"
   },
-  "/_nuxt/error-404.qWx1mKB0.js": {
+  "/_nuxt/error-404.CwkyWoxk.js": {
     "type": "application/javascript",
-    "etag": "\"19b0-xp+ZimLp6ms7QWNUu2XjzkshIyE\"",
-    "mtime": "2024-05-07T17:14:32.158Z",
+    "etag": "\"19b0-rzpELXXjmPkGTGPtNG+5u+9tOsk\"",
+    "mtime": "2024-06-01T19:42:47.346Z",
     "size": 6576,
-    "path": "../public/_nuxt/error-404.qWx1mKB0.js"
+    "path": "../public/_nuxt/error-404.CwkyWoxk.js"
+  },
+  "/_nuxt/error-500.B8FBH7Es.js": {
+    "type": "application/javascript",
+    "etag": "\"77e-HerspadIGmiyZSu6tO18c3Q7ous\"",
+    "mtime": "2024-06-01T19:42:47.339Z",
+    "size": 1918,
+    "path": "../public/_nuxt/error-500.B8FBH7Es.js"
   },
   "/_nuxt/error-500.BXQ_YkC0.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"79e-ByRo+49BgcevWdRjJy3CMx2IA5k\"",
-    "mtime": "2024-05-07T17:14:32.159Z",
+    "mtime": "2024-06-01T19:42:47.339Z",
     "size": 1950,
     "path": "../public/_nuxt/error-500.BXQ_YkC0.css"
   },
-  "/_nuxt/error-500.C4HDhgFW.js": {
+  "/_nuxt/index.BPoqcj64.js": {
     "type": "application/javascript",
-    "etag": "\"77e-fsc6K2qXyJ2pd3WyN1JxKoGI4Mg\"",
-    "mtime": "2024-05-07T17:14:32.158Z",
-    "size": 1918,
-    "path": "../public/_nuxt/error-500.C4HDhgFW.js"
-  },
-  "/_nuxt/hero2.Ce6P4gh2.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"2c8a27-ZfmNeGmtLLUJ8aTPhERHK2mRKEI\"",
-    "mtime": "2024-05-07T17:14:32.165Z",
-    "size": 2918951,
-    "path": "../public/_nuxt/hero2.Ce6P4gh2.jpg"
-  },
-  "/_nuxt/index.D0KOlmde.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"117-w+p4q720ZUsIqVjH/Y/aokmRI3k\"",
-    "mtime": "2024-05-07T17:14:32.159Z",
-    "size": 279,
-    "path": "../public/_nuxt/index.D0KOlmde.css"
-  },
-  "/_nuxt/index.DlfRTCFF.js": {
-    "type": "application/javascript",
-    "etag": "\"691e-P8YOpWM7rJk2DvjR5m0w1HBnCcY\"",
-    "mtime": "2024-05-07T17:14:32.158Z",
-    "size": 26910,
-    "path": "../public/_nuxt/index.DlfRTCFF.js"
+    "etag": "\"ae3c-Vum77r/I3LXCHq2kfKAu3DOcCe4\"",
+    "mtime": "2024-06-01T19:42:47.326Z",
+    "size": 44604,
+    "path": "../public/_nuxt/index.BPoqcj64.js"
   },
   "/_nuxt/logo.C40Epyxm.png": {
     "type": "image/png",
     "etag": "\"bf7c-rtvEyti1S4MdTJa5lg6c2AvwM6c\"",
-    "mtime": "2024-05-07T17:14:32.158Z",
+    "mtime": "2024-06-01T19:42:47.339Z",
     "size": 49020,
     "path": "../public/_nuxt/logo.C40Epyxm.png"
   },
   "/_nuxt/Me.CT3Xngc7.png": {
     "type": "image/png",
     "etag": "\"3424d-Y770327A9Yetp8do9Tm8ku6VVbw\"",
-    "mtime": "2024-05-07T17:14:32.148Z",
+    "mtime": "2024-06-01T19:42:47.339Z",
     "size": 213581,
     "path": "../public/_nuxt/Me.CT3Xngc7.png"
   },
-  "/_nuxt/vue.f36acd1f.BMIBV-mE.js": {
+  "/_nuxt/musicplayer.DUSfwryT.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"7c62-f/trJxb/KrTHNkfrF1sJmolzfy0\"",
+    "mtime": "2024-06-01T19:42:47.339Z",
+    "size": 31842,
+    "path": "../public/_nuxt/musicplayer.DUSfwryT.jpg"
+  },
+  "/_nuxt/sql-server.lVVeR3xd.svg": {
+    "type": "image/svg+xml",
+    "etag": "\"1635-gZ3Wory1oIq3hOeEWRw+iBxQr1A\"",
+    "mtime": "2024-06-01T19:42:47.339Z",
+    "size": 5685,
+    "path": "../public/_nuxt/sql-server.lVVeR3xd.svg"
+  },
+  "/_nuxt/todo.Dhm_Xl2n.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"543b-qHXlEH7NDqzx72CaARPvoqgtCDk\"",
+    "mtime": "2024-06-01T19:42:47.339Z",
+    "size": 21563,
+    "path": "../public/_nuxt/todo.Dhm_Xl2n.jpg"
+  },
+  "/_nuxt/vue.f36acd1f.BGuWfreM.js": {
     "type": "application/javascript",
-    "etag": "\"186-+/PJDSpqB6/UNWuPGDVk1HUbP18\"",
-    "mtime": "2024-05-07T17:14:32.158Z",
+    "etag": "\"186-eMX5+eJezQsvN5Av+juIIChAZtQ\"",
+    "mtime": "2024-06-01T19:42:47.346Z",
     "size": 390,
-    "path": "../public/_nuxt/vue.f36acd1f.BMIBV-mE.js"
+    "path": "../public/_nuxt/vue.f36acd1f.BGuWfreM.js"
   },
   "/_nuxt/builds/latest.json": {
     "type": "application/json",
-    "etag": "\"47-T48/ToTvis3WNXhO0dYQRtP4uy4\"",
-    "mtime": "2024-05-07T17:14:35.565Z",
+    "etag": "\"47-G0ZDnWr56afcatYVvBTZJSFfhU8\"",
+    "mtime": "2024-06-01T19:42:50.842Z",
     "size": 71,
     "path": "../public/_nuxt/builds/latest.json"
   },
-  "/_nuxt/builds/meta/3f3c3694-fdf0-4cfa-bbce-d82af334503f.json": {
+  "/_nuxt/builds/meta/9e0033c1-b60d-4fe5-9b68-d615bc21bd7d.json": {
     "type": "application/json",
-    "etag": "\"8b-G3zVNhb9ZaDzFa2BSCIAsbNoGvo\"",
-    "mtime": "2024-05-07T17:14:35.566Z",
+    "etag": "\"8b-wvgDUvBIwOmIbKzQwpxXWM+0tVY\"",
+    "mtime": "2024-06-01T19:42:50.843Z",
     "size": 139,
-    "path": "../public/_nuxt/builds/meta/3f3c3694-fdf0-4cfa-bbce-d82af334503f.json"
+    "path": "../public/_nuxt/builds/meta/9e0033c1-b60d-4fe5-9b68-d615bc21bd7d.json"
   }
 };
 
@@ -5400,58 +5362,12 @@ const _f4b49z = eventHandler((event) => {
   return readAsset(id);
 });
 
-const options = {
-  "message": [
-    {
-      "to": "jerometshivhase@gmail.com"
-    }
-  ],
-  "smtp": {
-    "host": "smtp.mailtrap.io",
-    "port": "2525"
-  }
-};
-
-const send = (async (body, options, transport) => {
-  body = {
-    config: 0,
-    ...body
-  };
-  if (typeof body.config === 'string') {
-    const configIndex = findIndex(_ => _.name === body.config)(options.message);
-    if (configIndex === -1) {
-      throw new Error(`Message config with name '${body.config}' not found.`);
-    }
-    body.config = configIndex;
-  } else if (!options.message[body.config]) {
-    throw new Error(`Message config not found at index ${body.config}.`);
-  }
-  await transport.sendMail({
-    ...omit(['config', 'to', 'cc', 'bcc'])(body),
-    ...omit(['name'])(options.message[body.config])
-  });
-});
-
-const transport = nodemailer.createTransport(options.smtp);
-const _d3OQlM = defineEventHandler(async event => {
-  try {
-    await send(await readBody(event), options, transport);
-  } catch (error) {
-    throw createError$1({
-      statusCode: 500,
-      statusMessage: error.message
-    });
-  }
-  return '';
-});
-
-const _lazy_2aE4Ty = () => import('../handlers/renderer.mjs').then(function (n) { return n.r; });
+const _lazy_AdZuqE = () => import('../handlers/renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
   { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_2aE4Ty, lazy: true, middleware: false, method: undefined },
-  { route: '/mail/send', handler: _d3OQlM, lazy: false, middleware: false, method: "post" },
-  { route: '/**', handler: _lazy_2aE4Ty, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_AdZuqE, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_AdZuqE, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -5825,5 +5741,5 @@ trapUnhandledNodeErrors();
 setupGracefulShutdown(listener, nitroApp);
 const nodeServer = {};
 
-export { $fetch as $, send$1 as a, setResponseStatus as b, setResponseHeaders as c, useRuntimeConfig as d, eventHandler as e, getQuery as f, getResponseStatus as g, createError$1 as h, getRouteRules as i, joinURL as j, getResponseStatusText as k, hasProtocol as l, isScriptProtocol as m, defu as n, sanitizeStatusCode as o, parseURL as p, createHooks as q, parseQuery as r, setResponseHeader as s, withTrailingSlash as t, useNitroApp as u, withoutTrailingSlash as v, withQuery as w, nodeServer as x };
+export { $fetch as $, send as a, setResponseStatus as b, setResponseHeaders as c, useRuntimeConfig as d, eventHandler as e, getQuery as f, getResponseStatus as g, createError$1 as h, getRouteRules as i, joinURL as j, getResponseStatusText as k, hasProtocol as l, isScriptProtocol as m, defu as n, sanitizeStatusCode as o, parseURL as p, createHooks as q, parseQuery as r, setResponseHeader as s, withTrailingSlash as t, useNitroApp as u, withoutTrailingSlash as v, withQuery as w, nodeServer as x };
 //# sourceMappingURL=node-server.mjs.map
