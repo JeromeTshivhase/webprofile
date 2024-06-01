@@ -16,7 +16,7 @@
       </div>
       <!-- End Section Title -->
 
-      <div class="border shadow-lg p-10 rounded-lg">
+      <div class="border shadow-lg p-5 rounded-lg">
         <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <!-- Project Card -->
         <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl group">
