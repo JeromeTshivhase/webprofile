@@ -51,7 +51,7 @@
               <p class="mt-4 text-gray-300">
                 Developed a robust registration system with QR code functionality for seamless event management and attendance tracking. Built with Java and Spring Boot, and integrated with MS SQL Server for reliable database management.
               </p>
-              <a href="https://github.com/TshivhaseNdiene/Registration-System-with-QR-code" class="mt-4 inline-flex items-center text-blue-400 hover:underline">
+              <a href="https://github.com/TshivhaseNdiene/TshivhaseNdiene-registration-system-with-QR-code/tree/main" class="mt-4 inline-flex items-center text-blue-400 hover:underline">
                 Visit my GitHub for more
                 <svg class="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M9 18l6-6-6-6"/>
